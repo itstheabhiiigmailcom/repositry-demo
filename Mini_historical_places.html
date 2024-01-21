@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical places</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .navbar {
+            border: 2px solid red;
+            border-radius: 8px;
+            /* background-color: aquamarine; */
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+
+        }
+
+        .navbar::before {
+            content: "";
+            background-image: linear-gradient(to bottom right, red, yellow);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 1;
+        }
+
+        .navbar .ul {
+            display: flex;
+            margin-left: 271px;
+            list-style: none;
+        }
+
+        .navbar .ul .li {
+            color: #063827;
+            margin: 3px 14px;
+            padding: 7px 7px;
+            font-size: 25px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        #searchbar {
+            margin-left: 249px;
+            padding: 5px 5px;
+        }
+
+        #searchbar input {
+            padding: 5px 5px;
+            margin-left: 13px;
+            font-size: 15px;
+            border-radius: 9px;
+            background-color: transparent;
+            border: 1px solid #364276;
+        }
+
+        #searchbar input::placeholder {
+            color: rgb(28, 21, 21);
+        }
+
+        .navbar .logo img {
+            width: 58px;
+            height: 45px;
+            width: 68px;
+            height: 61px;
+        }
+
+        .navbar .logo {
+            position: absolute;
+            left: 10px;
+            top: 0px;
+        }
+
+        .transparent-btn {
+            background-color: transparent;
+        }
+
+        .btn-format {
+            color: #063827;
+            font-size: 22px;
+            margin-top: -3px;
+            border-style: none;
+        }
+
+        body {
+            /*background: white;*/
+            color: red;
+            opacity: 0.9;
+            width: 100vw;
+
+        }
+
+        .main ul {
+            position: absolute;
+            left: 0px;
+            top: 114px;
+            display: flex;
+            margin: 10px;
+            position: relative;
+        }
+
+        .main ul img {
+            width: 346px;
+            height: 240px;
+            border-radius: 13px;
+
+        }
+
+
+        .main ul li {
+            background-color: transparent;
+            margin: 30px 46px;
+            list-style: none;
+            padding: 8px;
+            border-radius: 8px;
+            width: 360px;
+            box-shadow: 8px 8px 13px 3px lightblue, 5px 5px green;
+
+        }
+
+        section {
+            width: 100%;
+            height: 1675px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            right: 0px;
+        }
+
+        .row1 p {
+            color: #562626;
+        }
+
+        .row2 p {
+            color: #562626;
+        }
+
+        .row3 p {
+            color: #562626;
+        }
+
+        audio {
+            width: 349px;
+            height: 52px;
+        }
+
+        .national-anthem {
+            height: 69px;
+            width: 25%;
+            position: absolute;
+            left: 550px;
+            top: 1849px;
+        }
+
+        audio::-webkit-media-controls-panel {
+            background-image: linear-gradient(to bottom right, red, yellow);
+            /* Change this to your desired color */
+            color: #fff;
+            /* Change this to the text color you prefer */
+        }
+
+        audio::-webkit-media-controls-play-button {
+            background-color: #8da011;
+            border-radius: 50%;
+        }
+
+        audio::-webkit-media-controls-volume-slider {
+            background-color: #8da011;
+            border-radius: 50%;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        audio::-webkit-media-controls-mute-button {
+            background-color: #8da011;
+            border-radius: 50%;
+        }
+
+        .footer-background {
+            background: rgb(0, 0, 0, 0.7) url('bg1.jpg');
+            background-size: cover;
+            background-blend-mode: darken;
+        }
+
+        footer {
+            width: 100%;
+            height: 100px;
+            position: absolute;
+            bottom: -1338px;
+            left: 0px;
+            border-radius: 6px;
+        }
+
+        footer .text {
+            color: white;
+            margin-left: 587px;
+            margin-top: 12px;
+        }
+
+        footer li {
+            list-style: none;
+            margin: -12px 26px;
+
+        }
+        footer .contact {
+            display: flex;
+            margin-left: 100px;
+            color: white;
+            font-size: 35px;
+        }
+
+        .contact h6 {
+            margin-right: 26px;
+            font-size: 22px;
+        }
+
+        .watermark {
+            font-size: 17px;
+            margin-top: 2px;
+            margin-left: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <header class="navbar">
+        <ul class="ul">
+            <li class="logo li"><img src="his_logo.png" alt="logo"></li>
+            <li class="li">Home</li>
+            <li class="li">Services</li>
+            <li class="li">Booking</li>
+            <li class="li">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle transparent-btn btn-format" type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Visiting Services
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item active" href="#">you need rental vehicle</a></li>
+                        <li><a class="dropdown-item" href="#">To Stay</a></li>
+                        <li><a class="dropdown-item" href="#">Need Assist</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="li" id="searchbar">search
+                <input type="text" placeholder="Search..">
+            </li>
+        </ul>
+    </header>
+    <section class="main">
+        <ul class="row1">
+            <li class="a">
+                <a href="https://en.wikipedia.org/wiki/Red_Fort">
+                    <img src="https://assets-news.housing.com/news/wp-content/uploads/2022/07/20202710/10-famous-historical-places-in-India.jpg"
+                        alt="">
+                </a>
+                <p><b>Red Fort</b></p>
+                <p class="text">The Sanchi Stupa is a Buddhist monument in Madhya Pradesh, India. It is a hemispherical
+                    dome-shaped structure made of bricks and stone, and is believed to contain the relics of the Buddha.
+                </p>
+            </li>
+            <li class="b">
+                <a href="https://en.wikipedia.org/wiki/Taj_Mahal">
+                    <img src="https://assets.traveltriangle.com/blog/wp-content/uploads/2017/07/Agra1.jpg?tr=w-400"
+                        alt="">
+                </a>
+                <p><b>Taj Mahal</b></p>
+                <p>The Taj Mahal is considered one of the most beautiful buildings in the world. It is located in the
+                    city of Agra in northern India</p>
+            </li>
+            <li class="c">
+                <a href="https://en.wikipedia.org/wiki/India_Gate">
+                    <img src="https://wanderon.in/_next/image?url=https%3A%2F%2Fdr7f10k1l6bnm.cloudfront.net%2Fwp-content%2Fuploads%2F2023%2F08%2F12-min-7-scaled.jpg&w=3840&q=75"
+                        alt="">
+                </a>
+                <p><b>India Gate</b></p>
+                <p>At the centre of New Delhi stands the 42 m high India Gate, an "Arc-de-Triomphe" like archway in the
+                    middle of a crossroad. Almost similar to its French counterpart, it commemorates the 70,000 Indian
+                    soldiers who lost their lives fighting for the British Army during the World War I.</p>
+            </li>
+        </ul>
+        <ul class="row2">
+            <li class="d">
+                <a href="https://en.wikipedia.org/wiki/Qutb_Minar">
+                    <img src="https://ihplb.b-cdn.net/wp-content/uploads/2018/06/Qutub-Minar.jpg" alt="">
+                </a>
+                <p><b>Qutub-Minar</b></p>
+                <p>Qutbu'd-Din Aibak laid the foundation of Minar in AD 1199 for the use of the mu'azzin (crier) to give
+                    calls for prayer and raised the first storey, to which were added three more storeys by his
+                    successor and son-in-law, Shamsu'd-Din Iltutmish (AD 1211-36).</p>
+            </li>
+            <li class="e">
+                <a href="https://en.wikipedia.org/wiki/Lotus_Temple">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK8idJBfgqM73HYvH6z95saKb6Ubzy0hN7mA&usqp=CAU"
+                        alt="">
+                </a>
+                <p><b>Lotus Temple</b></p>
+                <p>The Lotus Temple is a Bahá'í House of Worship in New Delhi, India. It's also known as
+                    Mashriqu'l-Adhkár. The temple is known for its flowerlike shape and is a prominent attraction in the
+                    city.</p>
+            </li>
+            <li class="f">
+                <a href="https://en.wikipedia.org/wiki/Charminar">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ5MJSxFCBPaZ43cKQVlxMZu3MboBkdxrxJQ&usqp=CAU"
+                        alt="">
+                </a>
+                <p><b>Char Minar</b></p>
+                <p>Charminar, which is synonymous with Hyderabad is one of the magnificent structures built by Mohammad
+                    Quli Qutub Shah, the fifth ruler of the Qutub Shahi dynasty and also the founder of the City, in
+                    Hijri 1000 (A.D.1591-92). This is a square structure measuring 31.95 mts. on each side with imposing
+                    arches spanning a distance of 11mts. There are four minarets, each having three storeyes, rising to
+                    a height of 56 mts.</p>
+            </li>
+        </ul>
+        <ul class="row3">
+            <li class="g">
+                <a href="https://en.wikipedia.org/wiki/Hawa_Mahal">
+                    <img src="https://www.hindustantimes.com/ht-img/img/2023/08/30/1600x900/Konark-temple-in-Odisha---File-Photo-_1693366919294.jpg"
+                        alt="">
+                </a>
+                <p><b>Hawa Mahal</b></p>
+                <p>Hawa Mahal is a five-story palace in Jaipur, India.
+                    It's also known as the "Palace of Winds". The palace is 15 meters tall and is made from red and pink
+                    sandstone.
+                    The Hawa Mahal is said to be the world's tallest building without a foundation.</p>
+            </li>
+            <li class="g">
+                <a href="https://en.wikipedia.org/wiki/Victoria_Memorial,_Kolkata">
+                    <img src="image7.jpg" alt="">
+                </a>
+                <p><b>Victoria Memorial</b></p>
+                <p>The Victoria Memorial is a large marble monument in Kolkata, India. It was built between 1906 and
+                    1921 to honor Queen Victoria, who was Empress of India from 1876 to 1901. The memorial is now a
+                    museum and tourist attraction.</p>
+            </li>
+            <li class="g">
+                <a href="https://en.wikipedia.org/wiki/Sanchi">
+                    <img src="image8.jpeg" alt="">
+                </a>
+                <p><b>Sanchi stupa</b></p>
+                <p>The Sanchi Stupa is a Buddhist monument in Madhya Pradesh, India. It is a hemispherical dome-shaped
+                    structure made of bricks and stone, and is believed to contain the relics of the Buddha.</p>
+            </li>
+        </ul>
+    </section>
+    <div class="national-anthem">
+        <audio controls loop>
+            <source src="national_anthem.mp3">
+        </audio>
+    </div>
+    <footer class="footer-background">
+        <p class="text">Copyright &copy; 2024 www.Heritage.com - All rights reserved</p>
+        <div class="contact">
+            <h6>Contact Us : </h6>
+            <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="itstheabhiii@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+            <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
+            <li class="watermark">Developed & Design by -- <b style="color: #d4d514;">Abhishek kumar</b></li>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/ec86b42425.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
